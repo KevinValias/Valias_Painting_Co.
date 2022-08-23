@@ -14,7 +14,7 @@
 /* 01. Helpers */
 /* 02. Base */
 /* helper classes */
-.vlt-highlight,
+.highlight,
 mark
 {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, transparent), color-stop(5%, #fdf4b4), color-stop(37%, #fdf4b4), color-stop(37%, transparent));
