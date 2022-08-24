@@ -757,32 +757,32 @@
   );
 
   // Contact Form
-  function after_form_submitted(data) {
-    if (data.result == "success") {
-      $("#success_message").show();
-      $("#error_message").hide();
-      setTimeout(function () {
-        $("#success_message").hide();
-      }, 5000);
-      $("#reused_form")[0].reset();
-    } else {
-      $("#error_message").append("<ul></ul>");
-      $("#success_message").hide();
-      $("#error_message").show();
-    } //else
-  }
+  //   function after_form_submitted(data) {
+  //     if (data.result == "success") {
+  //       $("#success_message").show();
+  //       $("#error_message").hide();
+  //       setTimeout(function () {
+  //         $("#success_message").hide();
+  //       }, 5000);
+  //       $("#reused_form")[0].reset();
+  //     } else {
+  //       $("#error_message").append("<ul></ul>");
+  //       $("#success_message").hide();
+  //       $("#error_message").show();
+  //     } //else
+  //   }
 
-  $("#reused_form").on("submit", function (e) {
-    e.preventDefault();
-    var form = $(this);
-    $.ajax({
-      type: "post",
-      url: "https://formsubmit.co/valiaspainting@gmail.com",
-      data: form.serialize(),
-      success: after_form_submitted,
-      dataType: "json",
-    });
-  });
+  //   $("#reused_form").on("submit", function (e) {
+  //     e.preventDefault();
+  //     var form = $(this);
+  //     $.ajax({
+  //       type: "post",
+  //       url: "https://formsubmit.co/valiaspainting@gmail.com",
+  //       data: form.serialize(),
+  //       success: after_form_submitted,
+  //       dataType: "json",
+  //     });
+  //   });
 
   // Shop
   $(".vlt-single-product-tabs").on("click", ".vlt-tabs a", function (e) {
