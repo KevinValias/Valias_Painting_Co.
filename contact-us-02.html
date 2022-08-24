@@ -584,7 +584,9 @@
     .then(() => {
       alert("Thank You For Subscribing To Valias Painting Company!");
     })
+	
   });
+  
 });
 </script>
 
@@ -595,55 +597,7 @@ function myFunction() {
 </script>
 
 
-	<script>
-		(function($) {
-
-			'use strict';
-
-			var isDraggable = $(document).width() > 641 ? true : true;
-			var position = new google.maps.LatLng(40.713669, -74.007266);
-
-			var map_options = {
-				center: position,
-				zoom: 10,
-				scaleControl: true,
-				streetViewControl: false,
-				mapTypeControl: false,
-				panControl: false,
-				zoomControl: false,
-				scrollwheel: false,
-				draggable: isDraggable
-			}
-
-			//inizialize the map
-			var map = new google.maps.Map(document.getElementById('map'), map_options);
-
-			//add a custom marker to the map
-			var marker = new google.maps.Marker({
-				position: position,
-				map: map,
-				animation: google.maps.Animation.DROP,
-				icon: 'assets/img/root/map-marker--blue.png'
-			});
-
-			google.maps.event.addListener(marker, 'click', toggleBounce);
-
-			google.maps.event.addDomListener(window, 'resize', function() {
-				var center = map.getCenter();
-				google.maps.event.trigger(map, 'resize');
-				map.setCenter(center);
-			});
-
-			function toggleBounce() {
-				if (marker.getAnimation() != null) {
-					marker.setAnimation(null);
-				} else {
-					marker.setAnimation(google.maps.Animation.BOUNCE);
-				}
-			}
-
-		})(jQuery);
-	</script>
+	
 	
 </body>
 
